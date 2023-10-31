@@ -1,0 +1,7 @@
+FROM python:3-slim
+WORKDIR /app
+COPY src/clienteTCP.py /app
+
+# aqui entra os args
+ENTRYPOINT ["python", "clienteTCP.py"]
+
