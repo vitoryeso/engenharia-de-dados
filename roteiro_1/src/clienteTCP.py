@@ -17,7 +17,8 @@ import sys
 import time
 
 # definicao das variaveis
-serverName = str(sys.argv[1])
+serverName = str(sys.argv[3])
+print("server name: ", serverName)
 serverPort = 30000 # porta a se conectar
 clientSocket = socket(AF_INET,SOCK_STREAM) # criacao do socket TCP
 clientSocket.connect((serverName, serverPort)) # conecta o socket ao servidor
