@@ -1,0 +1,42 @@
+version: '3.9'
+
+networks:
+  mynetwork:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.18.0.0/24
+
+services: 
+  servidor:
+    hostname: servidor
+    container_name: servidor-tcp
+    image: vitoryeso/servidortcp:v1
+    tty: true
+    networks:
+      - mynetwork
+
+  cliente: 
+    container_name: cliente1-tcp
+    depends_on:
+      - servidor
+    image: vitoryeso/clientetcp:v1
+    tty: true
+    command: python clientetcp.py servidor
+    restart: always
+    networks:
+      - mynetwork
+
+  cliente2: 
+    container_name: cliente2-tcp
+    depends_on:
+      - servidor
+    image: vitoryeso/clientetcp:v1
+    tty: true
+    command: python clientetcp.py servidor
+    restart: always
+    networks:
+      - mynetwork
+
+
