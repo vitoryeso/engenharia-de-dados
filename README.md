@@ -7,5 +7,6 @@ Engenharia de Dados DCA 2023.1
 -   Introdução ao Apache Spark
 -   Apache Spark - Dataframes
 -   Introdução ao MongoDB
+-   Introdução ao Apache Kafka e AirFlor
 -   Gerenciamento de fluxos de trabalho para pipelines de dados
 -   Projetos
