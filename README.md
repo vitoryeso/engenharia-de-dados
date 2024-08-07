@@ -12,7 +12,7 @@
 -   Projetos
 
 ## Experimentos
-1.  Docker
+1.  [Docker](roteiro_1/README.md)
 2.  Docker Compose
 3.  Hadoop e MapReduce
 4.  Spark RDD
