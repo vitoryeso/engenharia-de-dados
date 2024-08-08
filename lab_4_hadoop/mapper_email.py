@@ -6,7 +6,8 @@ for line in sys.stdin:
     
     if "dovecot: " in line:
         if "Jun " in line:
-            if "imap-login" in line:
+            if "imap-login: Login" in line:
                 user_str = line.split(" ")[7]
                 username = user_str.split("=<")[-1].replace(">,", "")
                 print(f"1\t{username}")
+
