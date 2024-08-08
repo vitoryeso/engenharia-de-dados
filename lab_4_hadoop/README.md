@@ -12,7 +12,7 @@ Este documento descreve os passos necessários para instalar e configurar o Hado
 
 1. Baixe o pacote do Hadoop da página oficial do Apache Hadoop: <https://hadoop.apache.org/releases.html>
 2. Descompacte o pacote em um diretório de sua escolha (por exemplo, `/usr/local/hadoop`)
-3. Configure as variáveis de ambiente do Hadoop adicionando as seguintes linhas ao arquivo `/etc/bash.bashrc`:
+3. Configure as variáveis de ambiente do Hadoop adicionando as seguintes linhas ao arquivo `~/.bashrc`:
     ```bash
     export HADOOP_HOME=/usr/local/hadoop
     export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
