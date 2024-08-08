@@ -15,6 +15,6 @@
 1.  [Docker](lab_1_docker/README.md)
 2.  [Docker Compose](lab_2_docker_compose/README.md)
 3.  [Hadoop e MapReduce](lab_4_hadoop/README.md)
-4.  Spark RDD
+4.  [Spark RDD](lab_5_spark_rdd/README.md)
 5.  PySpark + MongoDB
 6.  Spark + AirFlow
