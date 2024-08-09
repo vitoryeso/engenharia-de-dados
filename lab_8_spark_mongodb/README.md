@@ -13,7 +13,6 @@ Se copiarmos os dados do HDFS para um nó de computador que está executando o M
 Usar o Spark para processar os dados do HDFS e carregar no MongoDB é uma abordagem mais segura e escalável. O Spark pode processar os dados de forma distribuída em vários nós do cluster, utilizando técnicas de processamento de dados em paralelo, como o MapReduce, e armazenar os dados em um banco de dados NoSQL, como o MongoDB, que é projetado para lidar com grandes volumes de dados.
 
 ## Diagrama da Infraestrutura
-
 ![Diagrama da Infraestrutura](arch.png)
 
 ## Consultas de Exemplo
