@@ -1,0 +1,7 @@
+url: mongodb://localhost:27017/
+database: discentes_2024
+collection: discentes
+delimiter: ;
+header: True
+inferSchema: True
+arquivo_entrada: hdfs://localhost:9000/user/ye/discentes-2024.csv
