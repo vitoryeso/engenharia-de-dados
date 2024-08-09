@@ -13,7 +13,7 @@
 
 ## Experimentos
 1.  [Docker](lab_1_docker/README.md)
-2.  [Docker Compose](lab_2_docker_compose/README.md)
+2.  [Docker Compose](lab_2_docker_compose/)
 3.  [Hadoop e MapReduce](lab_4_hadoop/README.md)
 4.  [Spark RDD](lab_5_spark_rdd/README.md)
 5.  [PySpark + MongoDB](lab_8_spark_mongodb/README.md)
