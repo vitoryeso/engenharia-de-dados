@@ -1,0 +1,25 @@
+Estou implementando um pipeline de dados.
+
+A infraestrutura consiste em:
+	- HDFS, na pasta /user/sensor_corp/, dentro do HDFS
+	- MongoDB, na rede local
+	- Postgres, na rede local
+	- Kafka broker
+	- Spark Cluster Master (node 0)
+	- Spark Worker 1 (node 1)
+	
+Os dados sao de sensores, sendo assim, havera a geracao de dados sinteticos, escrevendo dados do tipo (tipo_sensor, medicao, timestamp, sendo o timestamp um tempo VALIDO, atual.). haverao envios para o HDFS, no formato .csv, e no formato json, e envios para o MongoDB, e para o Postgrees. Diferentes Apps, cada um mandando de um formato diferente para o datalake. Os Scripts geradores (Apps) deverao enviar, de forma similar a Aplicativos reais, ou seja, eu vou rodar via terminal, do tipo script.py -n 4000, script -n 100 --type-data anomaly. Ai o script envia n medicoes, para m formatos (json, csv, mongo, postgress). Os dados type anomaly irao simular sensores queimados (muita resistencia, pode enviar valor -1 ou nulo) ai o type-data good, envia valores de 80 a 100. deve existir uma pequena chance de virem valores atipicos, de 20 a 45. Os arquivos JSON e CSV devem ser enviados para /user/sensor_corp/, no HDFS.
+
+Feito a populacao do datalake, haverao 2 producers do kafka, em python, para fazer stream, dos dados do datalake (1 producer pegando do mongodb, e o outro producer pegando do postgress), e jogando para um topico do kafka, que sera lido posteriormente pelo spark.
+
+Deverao ter jobs spark, que, leem os dados via streaming, do kafka, e gera metricas, em tempo real, sobre os sensores. essas metricas devem ser cumulativas, e calculadas de forma iterativa, conforme le os dados. essas metricas sao enviadas para algum dashboard, pode ser qualquer dashboard, ainda estou pensando sobre isso, de preferencia um opensource e facil de rodar, talvez em python), e tambem essas metricas (ou metadados) sao salvas tanto no mongo quanto no postgrees.
+
+Me envie os 2 producers, os scripts dos "Apps" para gerar os dados sinteticos como foi solicitado, e tambem os jobs do spark, os jobs serao:
+
+	- gerar/atualizar metricas para o dashboard (saude dos sensores, media dos valores pelo tempo (algo meio smoothing), sensores online)
+	- ler dados do hdfs (todos os arquivos .csv e .json do diretorio), atualizar metricas
+	- migrate data from mongodb to postgress
+	- migrate data from postgress to mongodb
+	- TODOS os jobs, deveram salvar seus artefatos de output (metricas), no mongo, e no postgress. pense que o dashboard pode simplesmente ler do mongo e/ou do postrgrees.
+	
+Ah, pera, lembrei que ja fiz quase tudo. me envie apenas o script que gera os dados.

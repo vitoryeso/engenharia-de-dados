@@ -1,0 +1,18 @@
+# Use the official MongoDB image as the base image
+FROM mongo:6.0
+
+# Use a imagem oficial do MongoDB
+FROM mongo:latest
+
+# Copie o script de inicialização para o diretório apropriado
+COPY init-mongo.js /docker-entrypoint-initdb.d/
+
+# (Opcional) Defina a variável de ambiente para habilitar a autenticação
+ENV MONGO_INITDB_ROOT_USERNAME=admin
+ENV MONGO_INITDB_ROOT_PASSWORD=adminpassword
+ENV MONGO_INITDB_DATABASE=sensor_db
+ENV MONGO_INITDB_USERNAME=vyeso
+ENV MONGO_INITDB_PASSWORD=qweqwe000
+
+# Expose port 27017
+EXPOSE 27017

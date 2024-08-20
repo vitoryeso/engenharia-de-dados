@@ -1,0 +1,14 @@
+# Use the official PostgreSQL image as the base image
+FROM postgres:16
+
+# Set environment variables for database setup
+ENV POSTGRES_USER=vyeso
+ENV POSTGRES_PASSWORD=qweqwe000
+ENV POSTGRES_DB=sensor_db
+
+# Copy initialization scripts
+COPY ./init-postgres.sql /docker-entrypoint-initdb.d/
+
+# Expose port 5432
+EXPOSE 5432
+
