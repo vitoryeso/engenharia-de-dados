@@ -11,4 +11,3 @@ COPY ./init-postgres.sql /docker-entrypoint-initdb.d/
 
 # Expose port 5432
 EXPOSE 5432
-

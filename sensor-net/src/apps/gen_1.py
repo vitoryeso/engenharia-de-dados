@@ -21,7 +21,7 @@ def create_table_if_not_exists(conn):
 
 
 # Configurações de conexão para MongoDB
-mongo_client = MongoClient('mongodb://vyeso:qweqwe000@localhost:27018/sensor_db')
+mongo_client = MongoClient('mongodb://localhost:27017/sensor_db.sensor_data')
 mongo_db = mongo_client['sensor_db']
 mongo_collection = mongo_db['sensor_data']
 
@@ -31,7 +31,7 @@ postgres_conn = psycopg2.connect(
     user="vyeso",
     password="qweqwe000",
     host="localhost",
-    port="5433"
+    port="5432"
 )
 postgres_cursor = postgres_conn.cursor()
 
@@ -93,7 +93,7 @@ def save_to_mongo(data):
 # Função para salvar dados no Postgres
 def save_to_postgres(data):
     # Conecte-se ao banco de dados Postgres
-    conn = psycopg2.connect(dbname="sensor_db", user="vyeso", password="qweqwe000", host="localhost", port="5433")
+    conn = psycopg2.connect(dbname="sensor_db", user="vyeso", password="qweqwe000", host="localhost", port="5432")
     create_table_if_not_exists(conn)  # Criar a tabela, se não existir
 
     with conn.cursor() as postgres_cursor:
@@ -112,11 +112,15 @@ def save_to_postgres(data):
 # Função principal
 def main(n, type_data):
     data = generate_data(n, type_data)
-
-    # Salvar dados nos diferentes formatos e locais
     save_to_json_hdfs(data, '/user/sensor_corp/')
+
+    data = generate_data(n, type_data)
     save_to_csv_hdfs(data, '/user/sensor_corp/')
+
+    data = generate_data(n, type_data)
     save_to_mongo(data)
+
+    data = generate_data(n, type_data)
     save_to_postgres(data)
 
 if __name__ == "__main__":

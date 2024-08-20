@@ -22,4 +22,4 @@ Me envie os 2 producers, os scripts dos "Apps" para gerar os dados sinteticos co
 	- migrate data from postgress to mongodb
 	- TODOS os jobs, deveram salvar seus artefatos de output (metricas), no mongo, e no postgress. pense que o dashboard pode simplesmente ler do mongo e/ou do postrgrees.
 	
-Ah, pera, lembrei que ja fiz quase tudo. me envie apenas o script que gera os dados.
+Ah, pera, lembrei que ja fiz quase tudo. me envie apenas o script que gera os dados, e os dockerfiles de cada um dos bancos, e um docker-compose que roda os servicos, incluindo o de geracao de dados. lembre-se de dar hostnames pros servicos, para que a funcione em infraestruturas mais gerais.

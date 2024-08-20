@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   mongo:
     build:
@@ -7,12 +5,9 @@ services:
       dockerfile: Dockerfile.mongo
     container_name: mongo_container
     ports:
-      - "27018:27017"
+      - "27017:27017"
     volumes:
       - mongo_data:/data/db
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: mongoadmin
-      MONGO_INITDB_ROOT_PASSWORD: secret
 
   postgres:
     build:
@@ -20,7 +15,7 @@ services:
       dockerfile: Dockerfile.postgres
     container_name: postgres_container
     ports:
-      - "5433:5432"
+      - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
