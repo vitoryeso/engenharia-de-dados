@@ -1,0 +1,12 @@
+{
+  "name": "mongodb-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.mongodb.MongoDbConnector",
+    "mongodb.connection.string": "mongodb://192.168.0.3:27017/?replicaSet=rs0",
+    "mongodb.collection": "sensor_data",
+    "topic.prefix": "meu-topico-mongodb",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "mongodb.replica.set.name": "rs0",
+    "mongodb.replica.set.members": "192.168.0.3:27017"
+  }
+}

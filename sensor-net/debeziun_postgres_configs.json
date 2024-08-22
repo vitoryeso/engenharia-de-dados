@@ -1,0 +1,16 @@
+{
+  "name": "ye-postgres-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "database.hostname": "192.168.0.3",
+    "database.server.name": "192.168.0.3",
+    "database.port": "5432",
+    "database.user": "vyeso",
+    "database.password": "qweqwe000",
+    "database.dbname" : "sensor_db",
+    "plugin.name": "pgoutput",
+    "topic.prefix": "postgres-1",
+    "table.whitelist": "sensor_data",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter"
+  }
+}
