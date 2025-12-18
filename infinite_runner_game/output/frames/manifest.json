@@ -1,0 +1,14 @@
+{
+  "num_frames": 3,
+  "perspectives": [
+    "behind",
+    "top",
+    "side",
+    "isometric"
+  ],
+  "levels": [
+    "level_000.json",
+    "level_001.json",
+    "level_002.json"
+  ]
+}

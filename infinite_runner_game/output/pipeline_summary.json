@@ -1,0 +1,10 @@
+{
+  "output_directory": "output",
+  "directories": {
+    "frames": "output/frames",
+    "detected": "output/detected",
+    "sprites": "output/sprites",
+    "models_3d": "output/models_3d",
+    "game": "output/game_output"
+  }
+}
