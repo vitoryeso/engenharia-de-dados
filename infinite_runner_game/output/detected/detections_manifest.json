@@ -1,0 +1,40 @@
+[
+  {
+    "frame_id": "000",
+    "num_obstacles": 7,
+    "sprites": [
+      "output/sprites/frame_000/obstacle_001_hot_pink.png",
+      "output/sprites/frame_000/obstacle_002_hot_pink.png",
+      "output/sprites/frame_000/obstacle_003_hot_pink.png",
+      "output/sprites/frame_000/obstacle_004_magenta.png",
+      "output/sprites/frame_000/obstacle_005_magenta.png",
+      "output/sprites/frame_000/obstacle_006_spring_green.png",
+      "output/sprites/frame_000/obstacle_007_yellow.png"
+    ],
+    "coordinates": "output/detected/coords_000.json"
+  },
+  {
+    "frame_id": "001",
+    "num_obstacles": 5,
+    "sprites": [
+      "output/sprites/frame_001/obstacle_008_hot_pink.png",
+      "output/sprites/frame_001/obstacle_009_magenta.png",
+      "output/sprites/frame_001/obstacle_010_purple.png",
+      "output/sprites/frame_001/obstacle_011_spring_green.png",
+      "output/sprites/frame_001/obstacle_012_orange.png"
+    ],
+    "coordinates": "output/detected/coords_001.json"
+  },
+  {
+    "frame_id": "002",
+    "num_obstacles": 5,
+    "sprites": [
+      "output/sprites/frame_002/obstacle_013_cyan.png",
+      "output/sprites/frame_002/obstacle_014_cyan.png",
+      "output/sprites/frame_002/obstacle_015_spring_green.png",
+      "output/sprites/frame_002/obstacle_016_spring_green.png",
+      "output/sprites/frame_002/obstacle_017_yellow.png"
+    ],
+    "coordinates": "output/detected/coords_002.json"
+  }
+]

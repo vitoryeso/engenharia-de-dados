@@ -1,0 +1,109 @@
+{
+  "level_info": {
+    "width": 800,
+    "height": 600,
+    "num_lanes": 3
+  },
+  "obstacles": [
+    {
+      "id": 11,
+      "type": "barrier",
+      "position": {
+        "x": 365,
+        "y": 363,
+        "z": 26.810507952990204
+      },
+      "size": {
+        "width": 69,
+        "height": 137,
+        "depth": 30
+      },
+      "lane": 1,
+      "color_rgb": [
+        0,
+        255,
+        255
+      ]
+    },
+    {
+      "id": 12,
+      "type": "cube",
+      "position": {
+        "x": 94,
+        "y": 434,
+        "z": 37.51512510787578
+      },
+      "size": {
+        "width": 79,
+        "height": 66,
+        "depth": 50
+      },
+      "lane": 0,
+      "color_rgb": [
+        0,
+        255,
+        128
+      ]
+    },
+    {
+      "id": 13,
+      "type": "cube",
+      "position": {
+        "x": 368,
+        "y": 437,
+        "z": 78.01315445121094
+      },
+      "size": {
+        "width": 62,
+        "height": 63,
+        "depth": 50
+      },
+      "lane": 1,
+      "color_rgb": [
+        0,
+        255,
+        255
+      ]
+    },
+    {
+      "id": 14,
+      "type": "barrier",
+      "position": {
+        "x": 614,
+        "y": 396,
+        "z": 92.78187636216059
+      },
+      "size": {
+        "width": 103,
+        "height": 104,
+        "depth": 30
+      },
+      "lane": 2,
+      "color_rgb": [
+        0,
+        255,
+        128
+      ]
+    },
+    {
+      "id": 15,
+      "type": "wide_block",
+      "position": {
+        "x": 318,
+        "y": 459,
+        "z": 93.62432394097513
+      },
+      "size": {
+        "width": 163,
+        "height": 41,
+        "depth": 35
+      },
+      "lane": 1,
+      "color_rgb": [
+        255,
+        255,
+        0
+      ]
+    }
+  ]
+}

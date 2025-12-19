@@ -1,0 +1,42 @@
+[
+  {
+    "sprite": "output/sprites/frame_001/obstacle_008_hot_pink.png",
+    "mesh": "output/models_3d/models_001/obstacle_008_hot_pink/mesh.obj",
+    "metadata": {
+      "model": "Procedural",
+      "type": "cube"
+    }
+  },
+  {
+    "sprite": "output/sprites/frame_001/obstacle_009_magenta.png",
+    "mesh": "output/models_3d/models_001/obstacle_009_magenta/mesh.obj",
+    "metadata": {
+      "model": "Procedural",
+      "type": "cube"
+    }
+  },
+  {
+    "sprite": "output/sprites/frame_001/obstacle_012_orange.png",
+    "mesh": "output/models_3d/models_001/obstacle_012_orange/mesh.obj",
+    "metadata": {
+      "model": "Procedural",
+      "type": "cube"
+    }
+  },
+  {
+    "sprite": "output/sprites/frame_001/obstacle_010_purple.png",
+    "mesh": "output/models_3d/models_001/obstacle_010_purple/mesh.obj",
+    "metadata": {
+      "model": "Procedural",
+      "type": "cube"
+    }
+  },
+  {
+    "sprite": "output/sprites/frame_001/obstacle_011_spring_green.png",
+    "mesh": "output/models_3d/models_001/obstacle_011_spring_green/mesh.obj",
+    "metadata": {
+      "model": "Procedural",
+      "type": "cube"
+    }
+  }
+]
